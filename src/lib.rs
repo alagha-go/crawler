@@ -1,4 +1,4 @@
-#![allow(dead_code)]
+#![allow(dead_code, unused)]
 use static_init::dynamic;
 mod collector;
 use const_format::concatcp;
@@ -14,10 +14,6 @@ const MOVIES_URL: &str = concatcp!(DOMAIN, "/movie?page=");
 const TVSHOWS_URL: &str = concatcp!(DOMAIN, "/tv-show?page=");
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
-
-#[tokio::main]
-async fn main()  {
-}
 
 
 fn http_client() -> reqwest::Client {
