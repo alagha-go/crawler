@@ -1,8 +1,11 @@
-#![allow(dead_code)]
+#![allow(dead_code, unused)]
 use static_init::dynamic;
 mod collector;
+mod objectid;
 use const_format::concatcp;
+use serde::{Deserialize, Serialize};
 use collector::*;
+use objectid::ObjectId;
 
 include!("structs.rs");
 
